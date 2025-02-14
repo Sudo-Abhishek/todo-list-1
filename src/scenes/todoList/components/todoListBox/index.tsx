@@ -1,9 +1,9 @@
-import { Grid, Grid2 } from "@mui/material"
+import { Grid2 } from "@mui/material"
 
 const TodoListBox = () => {
 
     return (
-        <Grid2 >
+        <Grid2>
             this is todo list box.
 
         </Grid2>
