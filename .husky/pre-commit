@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname "$0")/h"
 
-yarn lint
+yarn lint-staged-files
 yarn build 
 yarn test
