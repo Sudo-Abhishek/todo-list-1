@@ -28,6 +28,7 @@
     "lint": "eslint \"src/**/*\"",
     "build": "webpack build --config config/webpack.prod.js",
     "lint:fix": "eslint \"src/**/*\"",
+    "lint-staged-files": "lint-staged --allow-empty --concurrent false",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "dev": "webpack serve --config config/webpack.dev.js"
   },
