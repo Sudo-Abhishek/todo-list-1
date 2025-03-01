@@ -5,16 +5,17 @@ import { TodoListDataStateI } from "../..";
 import { TASKS } from "../../../../services/general/constants";
 import TodoAddBar from "../addTodoItemBar";
 import TodoChild from "../todoChild";
+import React from "react";
 
 type TodoListChildLayoutPropsI = {
   themeValue: boolean;
   toggleTheme: (value: boolean) => void;
   handleTextfieldValue: (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
   handleTodoListData: (
     todoTask: TodoListDataStateI,
-    task: keyof typeof TASKS
+    task: keyof typeof TASKS,
   ) => void;
   textfieldValue: string;
   todoListData: TodoListDataStateI[];

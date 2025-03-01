@@ -1,16 +1,17 @@
 import { Grid2, TextField, Button } from "@mui/material";
 import { TASKS } from "../../../../services/general/constants";
 import { TodoListDataStateI } from "../..";
+import React from "react";
 
 type TodoAddBarPropsI = {
   handleTextfieldValue: (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => void;
   textfieldValue: string;
 
   handleTodoListData: (
     todoTask: TodoListDataStateI,
-    task: keyof typeof TASKS
+    task: keyof typeof TASKS,
   ) => void;
 };
 

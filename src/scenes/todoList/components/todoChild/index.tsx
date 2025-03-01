@@ -2,13 +2,14 @@ import { TodoListDataStateI } from "../..";
 import { TASKS } from "../../../../services/general/constants";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Checkbox, Grid2, Typography, useTheme } from "@mui/material";
+import React from "react";
 
 type TodoChildPropsI = {
   todoListItem: TodoListDataStateI;
   handleChecked: (index: number | undefined) => void;
   handleTodoListData: (
     todoTask: TodoListDataStateI,
-    task: keyof typeof TASKS
+    task: keyof typeof TASKS,
   ) => void;
 };
 
@@ -61,6 +62,7 @@ const TodoChild = ({
       <Grid2>
         <DeleteIcon
           fontSize="small"
+          data-testid="delete-button"
           titleAccess="Delete"
           sx={{ cursor: "pointer" }}
           onClick={() =>

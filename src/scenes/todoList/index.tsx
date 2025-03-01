@@ -2,6 +2,7 @@ import { Grid2 } from "@mui/material";
 import { useState } from "react";
 import { TASKS } from "../../services/general/constants";
 import TodoListChildLayout from "./components/todoListChildLayout";
+import React from "react";
 
 export interface TodoListDataStateI {
   id?: number;
@@ -17,7 +18,7 @@ const TodoList = ({ toggleTheme, themeValue }: TodoListI) => {
   const [todoListData, setTodoListData] = useState<TodoListDataStateI[]>([]);
   const handleTodoListData = (
     todoTask: TodoListDataStateI,
-    task: keyof typeof TASKS
+    task: keyof typeof TASKS,
   ) => {
     switch (task) {
       case "ADD":
@@ -40,7 +41,7 @@ const TodoList = ({ toggleTheme, themeValue }: TodoListI) => {
           const taskToBeDeleted = todoTask?.id;
           if (taskToBeDeleted !== undefined) {
             const updatedTasks = todoListData?.filter(
-              (item: TodoListDataStateI) => taskToBeDeleted != item.id
+              (item: TodoListDataStateI) => taskToBeDeleted != item.id,
             );
             setTodoListData(() => updatedTasks);
           } else {
@@ -66,7 +67,7 @@ const TodoList = ({ toggleTheme, themeValue }: TodoListI) => {
   };
   const [textfieldValue, setTextfieldValue] = useState<string>("");
   const handleTextfieldValue = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setTextfieldValue(event.target.value);
   };
@@ -91,6 +92,7 @@ const TodoList = ({ toggleTheme, themeValue }: TodoListI) => {
       alignItems="center"
       justifyContent="center"
       width="100%"
+      data-testid="todo-list"
     >
       <TodoListChildLayout
         handleChecked={handleChecked}
