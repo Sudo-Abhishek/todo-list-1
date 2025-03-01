@@ -1,0 +1,4 @@
+{
+  "*.{ts,tsx}": "esling --fix",
+  "*.{ts,tsx,md}": "yarn format"
+}
