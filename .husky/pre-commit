@@ -1,0 +1,3 @@
+yarn lint-staged-files
+yarn test
+yarn build

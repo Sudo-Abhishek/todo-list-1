@@ -1,4 +1,3 @@
-
 export interface BoxComponentI extends HTMLDivElement {
-    text?: string;
+  text?: string;
 }

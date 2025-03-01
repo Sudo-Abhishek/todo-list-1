@@ -3,11 +3,13 @@ const loader = require("sass-loader");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
     entry: path.resolve(__dirname, '../src/index.tsx'),
     output: {
         path: path.resolve(__dirname, "../dist"),
-        filename: "bundle.js"
+        filename: "[id].js",
+        chunkFilename : "[id].js",
+        clean : true,
+
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],  // Make sure Webpack resolves .tsx, .ts, and .js files
@@ -45,16 +47,6 @@ module.exports = {
             template: path.join(__dirname, '../public', 'index.html'),  // Ensure index.html exists in 'public'
         }),
     ],
-    devtool: "source-map", // For debugging
-    devServer: {
-        static: {
-            directory: path.join(__dirname, '../public'),
-        },
-        compress: true, // Enable gzip compression
-        port: 3000, // The port the dev server will run on
-        hot: true, // Enable hot module replacement (HMR)
-        open: true, // Automatically open the browser when the server starts
-        historyApiFallback: true, // For single-page apps (SPA) that use React Router
-    },
+
 
 }
