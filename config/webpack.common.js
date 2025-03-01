@@ -6,7 +6,10 @@ module.exports = {
     entry: path.resolve(__dirname, '../src/index.tsx'),
     output: {
         path: path.resolve(__dirname, "../dist"),
-        filename: "[name].bundle.js"
+        filename: "[id].js",
+        chunkFilename : "[id].js",
+        clean : true,
+
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],  // Make sure Webpack resolves .tsx, .ts, and .js files
