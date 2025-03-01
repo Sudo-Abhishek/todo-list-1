@@ -1,7 +1,6 @@
 import type { Theme } from "@mui/material/styles";
 import { createTheme } from "@mui/material/styles";
 
-
 export const defaultTheme: Theme = createTheme({
   typography: {
     fontFamily: `"Roboto", sans-serif`,
@@ -16,7 +15,7 @@ export const defaultTheme: Theme = createTheme({
     primary: {
       main: "#ffffff", // dark black for primary
       light: "rgb(216, 230, 236)",
-      dark : "#f0f3f5"
+      dark: "#f0f3f5",
     },
     secondary: {
       main: "#c7cfd2", //"#e5eef2", // Lighter version of secondary
@@ -40,7 +39,7 @@ export const defaultTheme: Theme = createTheme({
       light: "#0000ff", // use in link color
       dark: "#230cf0",
     },
-   
+
     background: {
       default: "#f0f3f5",
       paper: "#ffffff",
@@ -66,7 +65,6 @@ export const defaultTheme: Theme = createTheme({
       // active:"#74b9ff",
       focus: "#1e88e5",
     },
- 
   },
 });
 
@@ -84,7 +82,7 @@ export const darkTheme: Theme = createTheme({
     primary: {
       main: "#1d2832",
       light: "rgb(216, 230, 236)",
-      dark : "#1d2832"
+      dark: "#1d2832",
     },
     secondary: {
       main: "#3b4d5e",
@@ -108,7 +106,7 @@ export const darkTheme: Theme = createTheme({
       light: "#0e7cf4",
       dark: "#230cf0",
     },
-   
+
     background: {
       default: "#1d2832",
       paper: "#24323e",
